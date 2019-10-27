@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Controle Financeiro</title>
+		<link rel="icon" href="favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h1 class="titulo">Controle Financeiro</h1>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Registros</h2>
+				<div class="" style="margin-bottom: 10px;">
+					<label for="filtrar-tabela">Fitrar:</label>
+					<input type="text" name="filtro" id="filtrar-tabela" 
+						placeholder="Digite a descrição da receita" 
+						class="campo">
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th>Descrição</th>
+							<th>Categoria</th>
+							<th>Data</th>
+							<th>Valor</th>
+							<th>Saldo</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-receitas">
+						
+					</tbody>
+				</table>
+
+			</section>
+
+
+			<section class="container">
+		    <h2 id="titulo-form">Adicionar nova receita</h2>
+		    <ul class="msg-erros"></ul>
+		    <form id="form-adiciona">
+		        <div class="">
+		            <label for="descricao">Descrição:</label>
+		            <input id="descricao" name="descricao" type="text" placeholder="digite a descrição da sua receita" class="campo">
+		        </div>
+		        <div class="grupo">
+		            <label for="categoria">Categoria:</label>
+		            <input id="categoria" name="categoria" type="text" placeholder="digite a categoria da sua receita" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="data">Data:</label>
+		            <input id="data" name="data" type="text" placeholder="digite a data da sua receita" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="valor">Valor: R$</label>
+		            <input id="valor" name="valor" type="text" placeholder="digite o valor da sua receita" class="campo campo-medio">
+		        </div>
+
+		        <button id="adicionar-receita" class="botao bto-principal">Adicionar</button>
+		    </form>
+			</section>
+		</main>
+
+		<div class="loading">
+			<svg id="dots" width="64px" height="64px" version="1.1" id="L4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			  viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+			  <circle fill="#fff" stroke="none" cx="6" cy="50" r="6">
+			    <animate
+			      attributeName="opacity"
+			      dur="1s"
+			      values="0;1;0"
+			      repeatCount="indefinite"
+			      begin="0.1"/>    
+			  </circle>
+			  <circle fill="#fff" stroke="none" cx="26" cy="50" r="6">
+			    <animate
+			      attributeName="opacity"
+			      dur="1s"
+			      values="0;1;0"
+			      repeatCount="indefinite" 
+			      begin="0.2"/>       
+			  </circle>
+			  <circle fill="#fff" stroke="none" cx="46" cy="50" r="6">
+			    <animate
+			      attributeName="opacity"
+			      dur="1s"
+			      values="0;1;0"
+			      repeatCount="indefinite" 
+			      begin="0.3"/>     
+			  </circle>
+			</svg>
+		</div>
+
+		<script src="js/principal.js" ></script>
+
+	</body>
+</html>
